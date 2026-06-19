@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ChapterReader from '../components/ChapterReader.astro';
-const BASE = import.meta.env.BASE_URL;
+const RAW_BASE = import.meta.env.BASE_URL;
+const BASE = RAW_BASE.endsWith('/') ? RAW_BASE : RAW_BASE + '/';
 
 const chapters = [
   { n: '01', t: 'Introduction to the Australian Pathway', m: 'Free read' },
@@ -84,7 +85,7 @@ const faq = [
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand" href="#top">
-        <img class="brand-logo" src={`${BASE}goocampus-logo.png`.replace('//', '/')} alt="GooCampus Australia" />
+        <img class="brand-logo" src={`${BASE}goocampus-logo.png`} alt="GooCampus Australia" />
         <span class="brand-text">AMC Pathway Blueprint for IMGs</span>
       </a>
       <div class="nav-meta">
@@ -125,7 +126,7 @@ const faq = [
       </div>
       <div class="book-stage">
         <div class="book book-with-cover">
-          <img class="book-cover-img" src={`${BASE}book-cover.png`.replace('//', '/')} alt="Australia AMC Pathway Blueprint — 16-chapter guide for IMGs" />
+          <img class="book-cover-img" src={`${BASE}book-cover.png`} alt="Australia AMC Pathway Blueprint — 16-chapter guide for IMGs" />
           <div class="book-stamp book-stamp-call">
             <span class="bs-num">30 MIN</span>
             <span class="bs-label">EXPERT<br/>CALL</span>

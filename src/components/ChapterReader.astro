@@ -1,8 +1,9 @@
 ---
 // Chapter 1 — Introduction to the Australian Pathway
 // Embeds the actual chapter-1.pdf with download/print disabled.
-const BASE = import.meta.env.BASE_URL;
-const PDF_SRC = `${BASE}chapter-1.pdf`.replace('//', '/');
+const RAW_BASE = import.meta.env.BASE_URL;
+const BASE = RAW_BASE.endsWith('/') ? RAW_BASE : RAW_BASE + '/';
+const PDF_SRC = `${BASE}chapter-1.pdf`;
 ---
 
 <div class="reader" id="reader" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="reader-title">

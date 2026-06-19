@@ -671,7 +671,9 @@ section { position: relative; z-index: 2; }
 }
 .guarantee-body { min-width: 0; width: 100%; max-width: 720px; }
 .guarantee-body .eyebrow { display: block; margin-bottom: 14px; justify-content: center; }
-.guarantee-body .guarantee-options { text-align: left; }
+.guarantee-body .guarantee-options { text-align: center; }
+.guarantee-option { grid-template-columns: 1fr !important; gap: 6px !important; }
+.guarantee-option-mark { text-align: center; }
 .guarantee-body h2 {
   font-size: clamp(28px, 3.6vw, 42px);
   margin-bottom: 16px;
